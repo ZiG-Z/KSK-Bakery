@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="registration-form">
+        <form action="" method="POST" enctype="multipart/form-data">
+            {{ form.hidden_tag() }}
+           <div class="category_img">
+               <h1><center>Pizza</center></h1>
+           </div>
+           <br/>
+           <div>
+               <h3>Product Code : {{ pizza.product_code }}</h3>
+           </div>
+            <div class="form-group">
+                {{ form.type.label }}<br/>
+                {{ form.type (class="form-control item") }}
+            </div>
+            {% if form.type.errors %}
+                {% for error in form.type.errors %}
+                    <div style="color: red;">{{ error }}</div>
+                {% endfor %}
+            {% endif %}
+            <div class="form-group">
+                {{ form.image_file.label }}<br/>
+                {{ form.image_file (class="form-group item")}}
+            </div>
+            {% if form.image_file.errors %}
+                {% for error in form.image_file.errors %}
+                    <div style="color: red;">{{ error }}</div>
+                {% endfor %}
+            {% endif %}
+            <div class="form-group">
+                {{ form.product_detail.label }}<br/>
+                {{ form.product_detail (class="form-label item") }}
+            </div>
+            <div class="form-group">
+                {{ form.submit(class='btn btn-outline-info')}}
+            </div>
+        </form>
+    </div>
+{% endblock %}

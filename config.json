@@ -1,0 +1,6 @@
+{
+    "SECRET_KEY" : "b4ea539a892923b3e1771ade579ee0fa",
+    "SQLALCHEMY_DATABASE_URI" : "sqlite:///ksk.db",
+    "MAIL_USERNAME" : "",
+    "MAIL_PASSWORD" : ""
+}

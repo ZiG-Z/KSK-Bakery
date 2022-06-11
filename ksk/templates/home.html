@@ -1,0 +1,115 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+    <section class="bg-light text-dark p-5 text-center text-sm-start">
+        <div class="container">
+            <div class="d-sm-flex align-items-center justify-content-between">
+                <div>
+                    <h1>Decorate Your <span class="text-warning">Special Occassion</span></h1>
+                    <p class="lead my-4">
+                        We focus on serving you the magnificent taste of our cakes and the most
+                        spectacular and enchanting decoration to make your special day honorable
+                    </p>
+                    <a class="btn btn-primary btn-lg" target="_blank" href="https://www.facebook.com/KSK-Bakery-Kyal-Sin-Kha-103313811781093/">Order Now</a>
+                </div>
+                <img class="img-fluid w-50 d-none d-sm-block" src="{{ url_for('static',filename='images/ksklogo.png') }}" alt="gaming">
+            </div>
+        </div>
+    </section>
+
+<div id="shopping">
+   
+  
+    <div class="wrapper-grey padded">
+        <div class="container">
+            <h2 class="text-center">Satisfy Your Craving</h2>
+            <div class="col-xs-12 col-sm-4">
+                <div class="card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2));">
+                <div class="card-category">KSK</div>
+                <img style="height: 248px; border-radius: 2%;"  src="{{ url_for('static',filename='images/card1.jpg') }}" alt="cakes" />
+                <div class="card-description">
+                    <h2>Cakes</h2>
+                    <p>Different styles and flavours</p>
+                </div>
+                <img class="card-user avatar avatar-large" src="{{  url_for('static',filename='images/ksklogo.png') }}">
+                <a class="card-link" href="https://www.google.com" ></a>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4">
+                <div class="card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2));">
+                <div class="card-category">KSK</div>
+                <img style="height: 248px; border-radius: 2%;"  src="{{ url_for('static',filename='images/card2.jpg') }}" alt="breads&muffins" />
+                <div class="card-description">
+                    <h2>Breads and Muffins</h2>
+                    <p>Big and Delicious</p>
+                </div>
+                <img class="card-user avatar avatar-large" src="{{  url_for('static',filename='images/ksklogo.png') }}">
+                <a class="card-link" href="{{ url_for('breadsnacks.view_breadsnack') }}" ></a>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4">
+                <div class="card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2));">
+                <div class="card-category">KSK</div>
+                <img style="height: 248px; border-radius: 2%;"  src="{{ url_for('static',filename='images/card3.jpg') }}" alt="pizza" />
+                <div class="card-description">
+                    <h2>Pizza</h2>
+                    <p>Chessy and Yummy Slices</p>
+                </div>
+                <img class="card-user avatar avatar-large" src="{{  url_for('static',filename='images/ksklogo.png') }}">
+                <a class="card-link" href="{{ url_for('pizzas.view_pizza') }}" ></a>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="contact">
+    <!-- Contact & Map -->
+    <section class="p-5 bg-warning">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-md">
+            <h2 class="text-center mb-4">Contact Info</h2>
+            <ul class="list-group list-group-flush lead">
+              <li class="list-group-item">
+                <span class="fw-bold">Main Location:</span> 50 Main st Boston MA
+              </li>
+              <li class="list-group-item">
+                <span class="fw-bold">Enrollment Phone:</span> (555) 555-5555
+              </li>
+              <li class="list-group-item">
+                <span class="fw-bold">Facebook:</span> (333) 333-3333
+              </li>
+              <li class="list-group-item">
+                <span class="fw-bold">Enrollment Email:</span> (555)
+                enroll@frontendbc.test
+              </li>
+              <li class="list-group-item">
+                <span class="fw-bold">Student Email:</span>
+                student@frontendbc.test
+              </li>
+            </ul>
+          </div>
+          <div class="col-md">
+            <div id="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29112.185975513206!2d94.29063300827723!3d24.205965391872258!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x37497980a3414751%3A0x4e16d3deb406f8ac!2sTamu!5e0!3m2!1sen!2smm!4v1631363054591!5m2!1sen!2smm" width="320" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+</div>
+
+<!-- Footer -->
+    <footer class="p-5 bg-dark text-white text-center position-relative">
+      <div class="container">
+        <p class="lead">We Ornament Your Auspicious Day</p>
+
+        <a href="#" class="position-absolute bottom-0 end-0 p-5">
+          <i class="bi bi-arrow-up-circle h1"></i>
+        </a>
+      </div>
+    </footer>
+{% endblock %}

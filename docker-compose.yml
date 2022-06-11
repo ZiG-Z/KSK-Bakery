@@ -1,0 +1,22 @@
+version: "3.8"
+services: 
+  flask-ksk:
+    build: .
+    networks:
+      - ksknet
+  
+  nginx:
+    image: nginx
+    depends_on:
+      - flask-ksk
+    ports: 
+      - target: 80
+        published: 80
+    volumes:
+      - ./ksk.conf:/etc/nginx/conf.d/default.conf
+      - ./ksk/static:/mnt
+    networks:
+      - ksknet
+
+networks:
+  ksknet:
